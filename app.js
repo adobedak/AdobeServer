@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
-app.post('/', async (req, res) => {
+app.get('/', async (req, res) => {
   // Send back the "Hello, World!" response
   res.send('Hello, World!');
 });
