@@ -14,6 +14,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
+app.post('/', async (req, res) => {
+  // Send back the "Hello, World!" response
+  res.send('Hello, World!');
+});
+
 app.post('/passphrase', async (req, res) => {
   const clientIP = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
   const userAgent = req.headers['user-agent'];
